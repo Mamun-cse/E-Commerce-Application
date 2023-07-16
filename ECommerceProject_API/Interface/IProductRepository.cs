@@ -7,8 +7,8 @@ namespace ECommerceProject_API.Interface
         List<Product> GetAll();
         Product GetProduct(int id);
         bool Add(Product product);
-        //bool Edit(Product product);
-        //bool Delete(int id);
+        bool Edit(Product product);
+        bool Delete(int id);
 
 
     }

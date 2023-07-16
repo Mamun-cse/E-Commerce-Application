@@ -20,15 +20,24 @@ namespace ECommerceProject_API.Repository
                 
         }
 
-        //public bool Delete(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public bool Delete(int id)
+        {
+            var product = _dbContext.Products.FirstOrDefault(c=>c.ProductId == id);
+            if (product != null)
+            {
+               product.IsDeleted = true;
+               return _dbContext.SaveChanges() > 0;
 
-        //public bool Edit(Product product)
-        //{
-        //    throw new NotImplementedException();
-        //}
+            }
+            return false;
+        }
+
+        public bool Edit(Product product)
+        {
+            _dbContext.Products.Update(product);
+            return _dbContext.SaveChanges()>0;
+
+        }
 
         public List<Product> GetAll()
         {

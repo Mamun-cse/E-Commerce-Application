@@ -66,5 +66,41 @@ namespace ECommerceProject_API.Controllers
             }
 
         }
+        [HttpPut]
+        public IActionResult Edit([FromBody] Product product)
+        {
+            try
+            {
+                bool isSaved = _productRepository.Edit(product);
+                if(isSaved)
+                {
+                    return Ok("Product has been update");
+                }
+                return BadRequest("Product update failed");
+
+
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                bool isDeleted = _productRepository.Delete(id);
+                if (isDeleted)
+                {
+                    return Ok("Product has been deleted");
+                }
+                return BadRequest("Product deleted failed");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
