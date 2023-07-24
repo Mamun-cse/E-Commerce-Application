@@ -18,6 +18,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceDbConte
 
 builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -27,7 +28,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors(builder => {
+    builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader();
 
+});
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

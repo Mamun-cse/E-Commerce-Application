@@ -42,8 +42,13 @@ namespace ECommerceProject_API.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        
 
+        [HttpGet]
+        public IActionResult GetProductsByCategoryId(int ProductCategoryId) {
+            var products = _productRepository.GetProductsByCategoryId(ProductCategoryId);
+            return Ok(products);
+
+        }
 
         [HttpPost]
         public IActionResult Add([FromBody] Product product)

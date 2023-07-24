@@ -74,3 +74,9 @@ D:\Dot Net\ECommerceProject_API\ECommerceProject_API\obj\Debug\net7.0\refint\ECo
 D:\Dot Net\ECommerceProject_API\ECommerceProject_API\obj\Debug\net7.0\ECommerceProject_API.pdb
 D:\Dot Net\ECommerceProject_API\ECommerceProject_API\obj\Debug\net7.0\ECommerceProject_API.genruntimeconfig.cache
 D:\Dot Net\ECommerceProject_API\ECommerceProject_API\obj\Debug\net7.0\ref\ECommerceProject_API.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\System.Web.Cors.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\System.Net.Http.Formatting.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\System.Web.Http.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\System.Web.Http.Cors.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Dot Net\ECommerceProject_API\ECommerceProject_API\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

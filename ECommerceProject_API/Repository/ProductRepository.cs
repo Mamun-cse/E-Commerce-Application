@@ -22,7 +22,7 @@ namespace ECommerceProject_API.Repository
 
         public bool Delete(int id)
         {
-            var product = _dbContext.Products.FirstOrDefault(c=>c.ProductId == id);
+            var product = _dbContext.Products.FirstOrDefault(c=>c.Id == id);
             if (product != null)
             {
                product.IsDeleted = true;
@@ -46,8 +46,13 @@ namespace ECommerceProject_API.Repository
 
         public Product GetProduct(int id)
         {
-           var product = _dbContext.Products.FirstOrDefault(c=>c.ProductId == id);
+           var product = _dbContext.Products.FirstOrDefault(c=>c.Id == id);
             return product;
+        }
+
+        public List<Product> GetProductsByCategoryId(int ProductCategoryId)
+        {
+            return _dbContext.Products.Where(c=>c.ProductCategoryId == ProductCategoryId).ToList();
         }
     }
 }

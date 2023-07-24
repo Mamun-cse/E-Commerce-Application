@@ -6,7 +6,7 @@ namespace ECommerceProject_API.Model
     public class Product
     {
         [Key]
-        public int ProductId { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "The Product Name field is required.")]
         public string ProductName { get; set; }
@@ -25,9 +25,8 @@ namespace ECommerceProject_API.Model
         public string ImageUrl { get; set; }
         public decimal Discount { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; } = new DateTime();
-        //[ForeignKey("ProductCategoryId")]
+        //public DateTime CreatedAt { get; set; } = DateTime.Now;
+        ///[ForeignKey("ProductCategoryId")]
        // public virtual ProductCategory? ProductCategory { get; set; }
         //public virtual ICollection<CartItem> CartItems { get; set; }
        // public virtual ICollection<OrderItem> OrderItems { get; set; }
