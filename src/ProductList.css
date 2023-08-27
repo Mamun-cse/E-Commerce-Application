@@ -1,0 +1,10 @@
+/* ProductList.css */
+.product-list-container {
+    position: relative;
+  }
+  
+  .product-list-container.dimmed {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  

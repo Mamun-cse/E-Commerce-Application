@@ -18,6 +18,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceDbConte
 
 builder.Services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICartItemRepository, CartItemRepository>();
 builder.Services.AddCors();
 
 var app = builder.Build();

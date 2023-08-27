@@ -13,10 +13,9 @@ namespace ECommerceProject_API.Model
         public string Password { get; set; }
         [Required(ErrorMessage = "The Role field is required.")]
         public string Role { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; } = new DateTime();
 
-        public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<Review> Reviews { get; set; }
+        public List<CartItem> CartItems { get; set; }
+        //public virtual ICollection<Order> Orders { get; set; }
+        //public virtual ICollection<Review> Reviews { get; set; }
     }
 }

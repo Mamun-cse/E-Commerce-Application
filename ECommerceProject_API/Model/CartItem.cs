@@ -1,20 +1,22 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace ECommerceProject_API.Model
 {
     public class CartItem
     {
+        [Key]
         public int CartItemId { get; set; }
-        [Required(ErrorMessage = "The CartId field is required.")]
-        public int CartId { get; set; }
-        [Required(ErrorMessage = "The ProductId field is required.")]
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+        [ForeignKey("Product")]
         public int ProductId { get; set; }
-        [Required(ErrorMessage = "The Quantity field is required.")]
         public int Quantity { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public DateTime UpdatedAt { get; set; } = new DateTime();
-
-        public virtual Cart Cart { get; set; }
-        public virtual Product Product { get; set; }
+        // Navigation Prope]rties
+        //[JsonIgnore]
+        //public User? User { get; set; }
+        //[JsonIgnore]
+        //public Product? Product { get; set; }
     }
 }
